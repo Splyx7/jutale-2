@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "spotifyglass",
+  "version": "${version}",
+  "name": "Spotify Glass",
+  "description": "Spotify Overlay im Liquid-Glass-Design.",
+  "authors": ["you"],
+  "environment": "client",
+  "entrypoints": { "client": ["de.spotifyglass.SpotifyGlassClient"] },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
