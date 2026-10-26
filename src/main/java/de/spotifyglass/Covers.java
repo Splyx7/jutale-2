@@ -46,8 +46,7 @@ public final class Covers {
                     NativeImage img = new NativeImage(NativeImage.Format.RGBA, N, N, false);
                     for (int y = 0; y < N; y++) for (int x = 0; x < N; x++) img.setColorArgb(x, y, px[y * N + x]);
                     if (tex != null) mc.getTextureManager().destroyTexture(ID);
-                    tex = new NativeImageBackedTexture("spotifyglass_cover", img);
-                    tex.setFilter(true, false);
+                    tex = new NativeImageBackedTexture(() -> "spotifyglass_cover", img);
                     mc.getTextureManager().registerTexture(ID, tex);
                     tex.upload();
                     ready = true;
